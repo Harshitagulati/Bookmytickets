@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Site - Main Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 22px 20px; /* Increased height of navbar */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        .navbar a:hover {
+            color: #66fcf1; /* Change color on hover */
+        }
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px;
+            margin: 10px; /* Adjusted margin to move gaps to sides */
+        }
+        .section {
+            width: 38%; /* Set width of movie container to 30% minus gap */
+            margin-bottom: 20px;
+            background-color: #f8f8f8; /* Added background color */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the contents horizontally */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        .section:hover {
+            transform: scale(1.05); /* Increase size on hover */
+        }
+        .movie {
+            height: 350px; /* Reduced height of movie container */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .movie img {
+            max-width: 85%;
+            max-height: 80%; /* Make image fill its container */
+            border-radius: 10px;
+            object-fit: fill; /* Maintain aspect ratio */
+            margin: auto; /* Center the image horizontally */
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .options input[type="number"] {
+            width: 80px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .options input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .options input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div>
+        <a href="#home">Home</a>
+        <a href="#bollywood">Bollywood</a>
+        <a href="#hollywood">Hollywood</a>
+        <a href="#south-indian">South Indian</a>
+    </div>
+    <form action="search.php" method="get">
+        <input type="text" placeholder="Search movie..." name="search">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="section-container">
+    <div class="section">
+        <h2>Ratasanan <br>(Action,Drama) </h2>
+        <div class="movie">
+            <img src="https://www.scrolldroll.com/wp-content/uploads/2021/07/Ratsasan-best-south-indian-movies.jpg" alt="Bollywood Movie 1">
+            <div class="options">
+                <input type="number" placeholder="Tickets">
+                <input type="date" placeholder="Date">
+                <input type="number" placeholder="No. of Tickets">
+                <input type="submit" value="Proceed to Payment">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Master<br> (Thriller,Drama)</h2>
+        <div class="movie">
+            <img src="https://1.bp.blogspot.com/-_amEykbJFhc/XjFh_rsG5LI/AAAAAAAAEiA/BX83rRFxh38muiqkzYv3r0TC-h26v8Q0gCLcBGAsYHQ/s1600/master.jpg" alt="Bollywood Movie 2">
+            <div class="options">
+                <input type="number" placeholder="Tickets">
+                <input type="date" placeholder="Date">
+                <input type="number" placeholder="No. of Tickets">
+                <input type="submit" value="Proceed to Payment">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Lucifier<br> (Action,Thriller)</h2>
+        <div class="movie">
+            <img src="https://www.scrolldroll.com/wp-content/uploads/2021/07/lucifer-best-south-indian-movies.jpg" alt="Hollywood Movie 1">
+            <div class="options">
+                <input type="number" placeholder="Tickets">
+                <input type="date" placeholder="Date">
+                <input type="number" placeholder="No. of Tickets">
+                <input type="submit" value="Proceed to Payment">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2> HIT <br> (Suspense,Thriller) </h2>
+        <div class="movie">
+            <img src="https://img.gurugamer.com/resize/1200x-/2020/10/19/hit-ed90.jpg" alt="Hollywood Movie 1">
+            <div class="options">
+                <input type="number" placeholder="Tickets">
+                <input type="date" placeholder="Date">
+                <input type="number" placeholder="No. of Tickets">
+                <input type="submit" value="Proceed to Payment">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
